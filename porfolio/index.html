@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Francisco Romero Velázquez — desarrollador web full-stack y técnico en sistemas de Utrera, Sevilla." />
+    <title>Fran · Desarrollador Web Full-Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ─── HEADER ─────────────────────────────────────────── -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <strong class="brand-mark">FR</strong>
+          <div>
+            <p class="brand-label">portafolio</p>
+            <h1 class="brand-name">Francisco Romero Velázquez</h1>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#hero">inicio</a>
+          <a href="#about">sobre mí</a>
+          <a href="#skills">stack</a>
+          <a href="#projects">proyectos</a>
+          <a href="#experience">experiencia</a>
+          <a href="#contact">contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ─── HERO ───────────────────────────────────────────── -->
+      <section class="hero section" id="hero">
+        <div class="container hero-grid">
+
+          <div class="hero-copy animate fade-up">
+            <p class="code-label">// hola, mundo</p>
+            <h2 class="hero-title">Soy <span class="hero-name">Fran</span></h2>
+            <p class="hero-role">Francisco Romero · Desarrollador Web Full-Stack</p>
+            <p class="hero-text">
+              Full-stack con base en sistemas. Construyo aplicaciones de cabo a rabo —
+              desde la base de datos hasta la interfaz — y sé lo que pasa cuando algo
+              falla en producción.
+            </p>
+            <div class="hero-chips">
+              <span class="chip">Angular</span>
+              <span class="chip">React</span>
+              <span class="chip">Spring Boot</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">Docker</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">Ver proyectos</a>
+              <a class="button button-secondary" href="#contact">Contactar</a>
+            </div>
+          </div>
+
+          <div class="hero-photo animate fade-left">
+            <div class="photo-ring">
+              <div class="photo-frame">
+                <img src="img/fotoCV.JPG" alt="Francisco Romero Velázquez" loading="eager" />
+              </div>
+            </div>
+            <div class="photo-status">
+              <span class="status-dot"></span>
+              Disponible para nuevos proyectos
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ─── ABOUT ───────────────────────────────────────────── -->
+      <section class="section section-alt" id="about">
+        <div class="container">
+          <div class="section-heading animate fade-up">
+            <p class="code-label">// about.md</p>
+            <h2>Un poco sobre mí</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-bio animate fade-right">
+              <p class="bio-text">
+                Soy Fran, desarrollador web de Utrera (Sevilla). Acabo de terminar el
+                <strong>Grado Superior en DAW</strong> en el IES Ruiz Gijón y, antes de eso,
+                pasé por el Grado Medio de Sistemas Microinformáticos en el mismo centro.
+                Así que no solo sé programar: también entiendo lo que pasa debajo del capó.
+              </p>
+              <p class="bio-text">
+                He completado tres prácticas en empresas reales, construido cuatro proyectos
+                propios de principio a fin y sobrevivido a más de un servidor caído a deshora.
+                Me gusta esa zona donde el frontend se cruza con la lógica de negocio —
+                me siento cómodo tanto montando una API REST como ajustando un componente Angular
+                hasta que el diseño queda exactamente como debe.
+              </p>
+              <p class="bio-text">
+                Cuando no estoy picando código, probablemente estoy aprendiendo algo nuevo.
+                Que en mi caso es básicamente lo mismo.
+              </p>
+              <div class="soft-chips">
+                <span class="chip chip-soft">Trabajo en equipo</span>
+                <span class="chip chip-soft">Adaptabilidad</span>
+                <span class="chip chip-soft">Resolución de problemas</span>
+                <span class="chip chip-soft">Atención al cliente</span>
+              </div>
+            </div>
+
+            <div class="about-sidebar animate fade-left">
+              <div class="terminal-card terminal-sm">
+                <div class="terminal-bar">
+                  <span class="terminal-title">francisco@dev: ~</span>
+                  <div class="t-linux-btns">
+                    <span class="t-linux-btn">─</span>
+                    <span class="t-linux-btn">□</span>
+                    <span class="t-linux-btn t-linux-close">✕</span>
+                  </div>
+                </div>
+                <div class="terminal-body">
+                  <p><span class="prompt">$</span> cat status.txt</p>
+                  <p class="t-out t-green">Disponible para nuevas oportunidades</p>
+                  <p><span class="prompt">$</span> cat location.txt</p>
+                  <p class="t-out">Utrera, Sevilla</p>
+                  <p><span class="prompt">$</span> skills --top 4</p>
+                  <p class="t-out">Java &middot; Angular &middot; Laravel &middot; Docker</p>
+                  <p class="t-cursor">█</p>
+                </div>
+              </div>
+              <div class="edu-card">
+                <p class="edu-card-title">Formación</p>
+                <div class="edu-item">
+                  <span class="edu-year">2023 – 2026</span>
+                  <p class="edu-degree">C.F.G.S Desarrollo de Aplicaciones Web</p>
+                  <p class="edu-school">IES Ruiz Gijón · Utrera</p>
+                </div>
+                <div class="edu-sep"></div>
+                <div class="edu-item">
+                  <p class="edu-degree">C.F.G.M Sistemas Microinformáticos y Redes</p>
+                  <p class="edu-school">IES Ruiz Gijón · Utrera</p>
+                </div>
+              </div>
+              <div class="stat-pills">
+                <div class="stat-pill">
+                  <span class="stat-num">4</span>
+                  <span class="stat-label">proyectos</span>
+                </div>
+                <div class="stat-pill">
+                  <span class="stat-num">3</span>
+                  <span class="stat-label">prácticas</span>
+                </div>
+                <div class="stat-pill">
+                  <span class="stat-num">2</span>
+                  <span class="stat-label">titulaciones</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── STACK ───────────────────────────────────────────── -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading animate fade-up">
+            <p class="code-label">// package.json</p>
+            <h2>Con qué trabajo</h2>
+          </div>
+
+          <div class="stack-grid animate fade-up">
+            <div class="stack-cat">
+              <p class="stack-cat-label">Frontend</p>
+              <div class="chip-row">
+                <span class="chip">TypeScript</span>
+                <span class="chip">Angular 17+</span>
+                <span class="chip">React</span>
+                <span class="chip">Tailwind CSS</span>
+                <span class="chip">Bootstrap</span>
+                <span class="chip">SASS</span>
+                <span class="chip">Alpine.js</span>
+              </div>
+            </div>
+            <div class="stack-cat">
+              <p class="stack-cat-label">Backend</p>
+              <div class="chip-row">
+                <span class="chip">Java Spring Boot</span>
+                <span class="chip">PHP Laravel</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">OAuth2</span>
+                <span class="chip">JWT</span>
+                <span class="chip">Eloquent ORM</span>
+                <span class="chip">JPA / Hibernate</span>
+              </div>
+            </div>
+            <div class="stack-cat">
+              <p class="stack-cat-label">Infraestructura</p>
+              <div class="chip-row">
+                <span class="chip">Docker</span>
+                <span class="chip">Ubuntu Server</span>
+                <span class="chip">Debian</span>
+                <span class="chip">Apache</span>
+                <span class="chip">Nginx</span>
+                <span class="chip">Windows Server</span>
+                <span class="chip">Git</span>
+              </div>
+            </div>
+            <div class="stack-cat">
+              <p class="stack-cat-label">Bases de datos &amp; redes</p>
+              <div class="chip-row">
+                <span class="chip">MySQL</span>
+                <span class="chip">MariaDB</span>
+                <span class="chip">SQL Server</span>
+                <span class="chip">DHCP · DNS</span>
+                <span class="chip">FTP · SMTP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── PROJECTS ─────────────────────────────────────────── -->
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <div class="section-heading animate fade-up">
+            <p class="code-label">// git log --oneline</p>
+            <h2>Lo que he construido</h2>
+            <p class="section-desc">Dale la vuelta a cada carta para ver los detalles.</p>
+          </div>
+
+          <div class="projects-grid">
+
+            <article class="project-card animate fade-right">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="project-tag">TFG</div>
+                  <h3>SIMA</h3>
+                  <p class="project-subtitle">Gestor de Incidencias Urbanas</p>
+                  <p>
+                    Mapa interactivo para reportar y gestionar incidencias en la ciudad.
+                    Spring Boot + React, autenticación híbrida y panel de administración por roles.
+                  </p>
+                  <div class="card-front-stack">
+                    <span>Java</span><span>React</span><span>MariaDB</span><span>Ubuntu</span>
+                  </div>
+                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+                </div>
+                <div class="card-back" aria-hidden="true">
+                  <div class="project-tag">TFG · Spring Boot · React · MariaDB</div>
+                  <h3>SIMA — Gestor de Incidencias Urbanas</h3>
+                  <ul class="project-detail-list">
+                    <li>Aplicación SPA con mapa interactivo (MapLibre) para localizar y filtrar incidencias urbanas por categoría y estado.</li>
+                    <li>Autenticación híbrida: JWT propio y OAuth2 con Google. Roles de técnico, operador y supervisor.</li>
+                    <li>Panel admin con seguimiento en tiempo real y gestión completa del ciclo de vida de cada incidencia.</li>
+                    <li>Despliegue en Ubuntu Server con Apache como proxy inverso y certificado SSL.</li>
+                  </ul>
+                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate fade-up">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="project-tag">Nutrición</div>
+                  <h3>NutriTrack</h3>
+                  <p class="project-subtitle">Plataforma Nutricional Full-Stack</p>
+                  <p>
+                    Seguimiento nutricional con búsqueda de recetas en tiempo real,
+                    dashboard de macros y autenticación segura con Laravel Sanctum.
+                  </p>
+                  <div class="card-front-stack">
+                    <span>Angular</span><span>Laravel</span><span>Sanctum</span><span>TheMealDB</span>
+                  </div>
+                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+                </div>
+                <div class="card-back" aria-hidden="true">
+                  <div class="project-tag">TypeScript · Angular 17+ · PHP Laravel 11</div>
+                  <h3>NutriTrack — Plataforma Nutricional</h3>
+                  <ul class="project-detail-list">
+                    <li>Arquitectura Full-Stack segura con tokens de sesión mediante Laravel Sanctum y CRUD completo de perfiles nutricionales.</li>
+                    <li>Integración con la API TheMealDB para búsqueda dinámica de recetas según preferencias e ingredientes.</li>
+                    <li>Dashboard de macros y calorías con gráficos estadísticos dinámicos y seguimiento diario.</li>
+                    <li>Componentes Angular reutilizables con separación clara de capas y diseño responsive.</li>
+                  </ul>
+                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate fade-left">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="project-tag">Gaming</div>
+                  <h3>VideoTracker</h3>
+                  <p class="project-subtitle">Biblioteca de Videojuegos</p>
+                  <p>
+                    Explora juegos con datos de IGDB en tiempo real, filtra por género y plataforma,
+                    y ve qué se está streamando ahora mismo en Twitch.
+                  </p>
+                  <div class="card-front-stack">
+                    <span>Laravel 12</span><span>Tailwind</span><span>IGDB API</span><span>Twitch</span>
+                  </div>
+                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+                </div>
+                <div class="card-back" aria-hidden="true">
+                  <div class="project-tag">PHP Laravel 12 · Tailwind · Alpine.js</div>
+                  <h3>VideoTracker — Biblioteca de Videojuegos</h3>
+                  <ul class="project-detail-list">
+                    <li>Arquitectura MVC con Eloquent ORM y relaciones polimórficas entre juegos, plataformas, géneros y usuarios.</li>
+                    <li>Integración con la API de IGDB y autenticación OAuth2 de Twitch para datos de videojuegos en tiempo real.</li>
+                    <li>Exploración con filtros por género, plataforma y popularidad, con paginación eficiente.</li>
+                    <li>Seguimiento de streams activos en Twitch relacionados con los juegos explorados.</li>
+                  </ul>
+                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card animate fade-right">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="project-tag">Gestión</div>
+                  <h3>FiumPlan</h3>
+                  <p class="project-subtitle">Gestor de Proyectos</p>
+                  <p>
+                    Gestiona tareas y proyectos con prioridades claras, genera reportes PDF
+                    automáticos y almacena archivos en la nube.
+                  </p>
+                  <div class="card-front-stack">
+                    <span>Spring Boot</span><span>JPA</span><span>Cloudinary</span><span>PDF</span>
+                  </div>
+                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+                </div>
+                <div class="card-back" aria-hidden="true">
+                  <div class="project-tag">Java Spring Boot · JPA · Cloudinary</div>
+                  <h3>FiumPlan — Gestor de Proyectos</h3>
+                  <ul class="project-detail-list">
+                    <li>API REST con Spring Boot: gestión de proyectos con tareas, prioridades, estados y asignación por roles.</li>
+                    <li>Generación automática de reportes PDF para revisiones y seguimiento del avance.</li>
+                    <li>Almacenamiento multimedia con Cloudinary para adjuntos y recursos del proyecto.</li>
+                    <li>Sistema de notificaciones y control de permisos granular por rol de usuario.</li>
+                  </ul>
+                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── EXPERIENCE ─────────────────────────────────────── -->
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-heading animate fade-up">
+            <p class="code-label">// cv.json → experience</p>
+            <h2>Por dónde he pasado</h2>
+          </div>
+
+          <div class="timeline">
+
+            <article class="timeline-card animate fade-right">
+              <div class="tl-meta">
+                <span class="tl-year">2025 – 2026</span>
+                <span class="tl-badge">FCT DAW</span>
+              </div>
+              <h3>Desarrollador Web &amp; Frontend</h3>
+              <p class="tl-company">Inventtatte</p>
+              <ul class="timeline-list">
+                <li>Desarrollo del frontend con Angular, implementando componentes reutilizables y gestión de estado.</li>
+                <li>Integración con APIs REST para obtener y presentar datos dinámicos en las interfaces.</li>
+                <li>Colaboración en equipo con metodologías ágiles, revisiones de código y Git como hilo conductor.</li>
+                <li>Diseño de interfaces responsivas y accesibles adaptadas a los requisitos del cliente.</li>
+                <li>Participación en el backend: endpoints, lógica de negocio y pruebas.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-card animate fade-left">
+              <div class="tl-meta">
+                <span class="tl-year">2024</span>
+                <span class="tl-badge">Proyecto real</span>
+              </div>
+              <h3>Desarrollador Web</h3>
+              <p class="tl-company">Valrog</p>
+              <ul class="timeline-list">
+                <li>Diseño e implementación de una plataforma web para la búsqueda y reencuentro de mascotas desaparecidas.</li>
+                <li>Backend con Java Spring Boot: API REST, autenticación de usuarios y gestión de datos con JPA/Hibernate.</li>
+                <li>Sistema de publicación de avisos con fotos, descripciones y ubicación de mascotas.</li>
+                <li>Desarrollo en equipo adaptando la solución a los requisitos reales del cliente.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-card animate fade-right">
+              <div class="tl-meta">
+                <span class="tl-year">2023 – 2024</span>
+                <span class="tl-badge">FCT SMR</span>
+              </div>
+              <h3>Técnico Informático</h3>
+              <p class="tl-company">Supermercados Díaz Cadenas</p>
+              <ul class="timeline-list">
+                <li><strong>Sistemas:</strong> administración de servidores Linux y Windows (7, 10, 11) y configuración de SQL Server.</li>
+                <li><strong>Infraestructura:</strong> montaje de sistemas informáticos complejos y redes en aperturas de nuevos centros.</li>
+                <li><strong>Soporte:</strong> resolución de incidencias de hardware, redes y software corporativo, atención técnica telefónica y manuales de uso para empleados.</li>
+                <li><strong>Mantenimiento:</strong> inventario, etiquetado y mantenimiento de dispositivos móviles y periféricos.</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ─────────────────────────────────────────── -->
+      <section class="section section-alt section-contact" id="contact">
+        <div class="container contact-grid">
+
+          <div class="contact-copy animate fade-right">
+            <p class="code-label">// ping fran</p>
+            <h2>Hablamos</h2>
+            <p class="contact-intro">
+              Si tienes un proyecto en mente, una oferta de trabajo o simplemente
+              quieres preguntar algo, mándame un mensaje. Respondo rápido.
+            </p>
+            <div class="contact-details">
+              <a href="mailto:informaticafrv1@gmail.com" class="contact-link">
+                <span class="contact-icon">@</span>
+                informaticafrv1@gmail.com
+              </a>
+              <a href="tel:+34661609360" class="contact-link">
+                <span class="contact-icon">#</span>
+                661 609 360
+              </a>
+            </div>
+            <div class="contact-social">
+              <a class="button button-cv" href="src/RomeroVelazquezFranciscoCV.pdf" download aria-label="Descargar CV en PDF">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Descargar CV
+              </a>
+              <a class="button button-social" href="https://github.com/informaticafrv" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+              <a class="button button-social button-linkedin" href="https://www.linkedin.com/in/francisco-romero-vel%C3%A1zquez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form animate fade-left" novalidate>
+            <!-- honeypot: los bots lo rellenan, los humanos no lo ven -->
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
+            <label>
+              Nombre
+              <input type="text" name="name" placeholder="Tu nombre" required maxlength="100" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="tu@correo.com" required maxlength="150" />
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="4" placeholder="Cuéntame..." required maxlength="2000"></textarea>
+            </label>
+            <button type="submit" class="button button-primary">Enviar</button>
+          </form>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-mono">Francisco Romero Velázquez &copy; 2026</p>
+        <p class="footer-mono">Hecho con ganas desde Utrera, Sevilla</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
