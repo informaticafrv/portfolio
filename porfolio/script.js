@@ -63,7 +63,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-const CONTACT_API = 'https://TU_DOMINIO_API/api/contact';
+const CONTACT_API = 'https://api.franromero.es/api/contact';
 
 if (form) {
   form.addEventListener('submit', async (event) => {
