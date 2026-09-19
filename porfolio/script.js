@@ -16,51 +16,78 @@ const observer = new IntersectionObserver(handleIntersection, {
 
 animatedElements.forEach((element) => observer.observe(element));
 
-projectCards.forEach((card) => {
+// ─── Tarjetas de proyecto (volteo) ───────────────────────────
+// La cara que no se ve queda `inert`: fuera del orden de tabulación y del lector de pantalla.
+function setFlipped(card, flipped, moveFocus = false) {
+  const front = card.querySelector('.card-front');
+  const back = card.querySelector('.card-back');
   const frontBtn = card.querySelector('.project-toggle');
   const backBtn = card.querySelector('.project-back-btn');
-  const cardBack = card.querySelector('.card-back');
 
-  if (frontBtn) {
-    frontBtn.addEventListener('click', () => {
-      // Close any other flipped card first
-      projectCards.forEach((other) => {
-        if (other !== card && other.classList.contains('flipped')) {
-          other.classList.remove('flipped');
-          const otherFrontBtn = other.querySelector('.project-toggle');
-          const otherBack = other.querySelector('.card-back');
-          if (otherFrontBtn) otherFrontBtn.setAttribute('aria-expanded', 'false');
-          if (otherBack) otherBack.setAttribute('aria-hidden', 'true');
-        }
-      });
+  card.classList.toggle('flipped', flipped);
+  if (frontBtn) frontBtn.setAttribute('aria-expanded', String(flipped));
+  if (back) back.setAttribute('aria-hidden', String(!flipped));
+  if (front) front.inert = flipped;
+  if (back) back.inert = !flipped;
 
-      card.classList.add('flipped');
-      frontBtn.setAttribute('aria-expanded', 'true');
-      if (cardBack) cardBack.setAttribute('aria-hidden', 'false');
+  if (moveFocus) (flipped ? backBtn : frontBtn)?.focus();
+}
+
+projectCards.forEach((card) => {
+  setFlipped(card, false);
+
+  card.querySelector('.project-toggle')?.addEventListener('click', () => {
+    projectCards.forEach((other) => {
+      if (other !== card && other.classList.contains('flipped')) setFlipped(other, false);
     });
-  }
+    setFlipped(card, true, true);
+  });
 
-  if (backBtn) {
-    backBtn.addEventListener('click', () => {
-      card.classList.remove('flipped');
-      if (frontBtn) frontBtn.setAttribute('aria-expanded', 'false');
-      if (cardBack) cardBack.setAttribute('aria-hidden', 'true');
-    });
-  }
+  card.querySelector('.project-back-btn')?.addEventListener('click', () => {
+    setFlipped(card, false, true);
+  });
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    projectCards.forEach((card) => {
-      if (card.classList.contains('flipped')) {
-        card.classList.remove('flipped');
-        const frontBtn = card.querySelector('.project-toggle');
-        const cardBack = card.querySelector('.card-back');
-        if (frontBtn) frontBtn.setAttribute('aria-expanded', 'false');
-        if (cardBack) cardBack.setAttribute('aria-hidden', 'true');
-      }
+  if (e.key !== 'Escape') return;
+  projectCards.forEach((card) => {
+    if (card.classList.contains('flipped')) setFlipped(card, false, true);
+  });
+});
+
+// ─── Carruseles ──────────────────────────────────────────────
+document.querySelectorAll('.carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.carousel-track');
+  const dots = [...carousel.querySelectorAll('.carousel-dot')];
+  const count = dots.length;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let ticking = false;
+
+  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+
+  const goTo = (index) => {
+    const i = (index + count) % count;
+    track.scrollTo({ left: i * track.clientWidth, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  };
+
+  carousel.querySelector('.carousel-prev')?.addEventListener('click', () => goTo(current() - 1));
+  carousel.querySelector('.carousel-next')?.addEventListener('click', () => goTo(current() + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  track.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const active = current();
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === active)));
+      ticking = false;
     });
-  }
+  }, { passive: true });
+
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goTo(current() - 1);
+    if (e.key === 'ArrowRight') goTo(current() + 1);
+  });
 });
 
 const CONTACT_API = 'https://api.franromero.es/api/contact';

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
 
@@ -27,6 +27,7 @@
           <a href="#hero">inicio</a>
           <a href="#about">sobre mí</a>
           <a href="#skills">stack</a>
+          <a href="#systems">sistemas</a>
           <a href="#projects">proyectos</a>
           <a href="#experience">experiencia</a>
           <a href="#contact">contacto</a>
@@ -43,11 +44,11 @@
           <div class="hero-copy animate fade-up">
             <p class="code-label">// hola, mundo</p>
             <h2 class="hero-title">Soy <span class="hero-name">Fran</span></h2>
-            <p class="hero-role">Francisco Romero · Desarrollador Web Full-Stack</p>
+            <p class="hero-role">Francisco Romero · Desarrollador web junior · Full-Stack / Backend</p>
             <p class="hero-text">
-              Full-stack con base en sistemas. Construyo aplicaciones de cabo a rabo —
-              desde la base de datos hasta la interfaz — y sé lo que pasa cuando algo
-              falla en producción.
+              Desarrollador web con formación en sistemas. Me gusta detectar un problema
+              real y convertirlo en una aplicación que funcione de principio a fin: desde
+              la base de datos y la API hasta la interfaz y su despliegue en producción.
             </p>
             <div class="hero-chips">
               <span class="chip">Angular</span>
@@ -70,7 +71,7 @@
             </div>
             <div class="photo-status">
               <span class="status-dot"></span>
-              Disponible para nuevos proyectos
+              Buscando puesto junior · Full-stack o Backend
             </div>
           </div>
 
@@ -88,27 +89,29 @@
           <div class="about-grid">
             <div class="about-bio animate fade-right">
               <p class="bio-text">
-                Soy Fran, desarrollador web de Utrera (Sevilla). Acabo de terminar el
-                <strong>Grado Superior en DAW</strong> en el IES Ruiz Gijón y, antes de eso,
-                pasé por el Grado Medio de Sistemas Microinformáticos en el mismo centro.
-                Así que no solo sé programar: también entiendo lo que pasa debajo del capó.
+                Soy Francisco, desarrollador web de Utrera (Sevilla). Acabo de terminar el
+                <strong>Grado Superior en Desarrollo de Aplicaciones Web</strong> en el
+                IES Ruiz Gijón, tras cursar allí mismo el Grado Medio de Sistemas
+                Microinformáticos y Redes. He hecho prácticas en tres empresas y he
+                construido cuatro proyectos propios.
               </p>
               <p class="bio-text">
-                He completado tres prácticas en empresas reales, construido cuatro proyectos
-                propios de principio a fin y sobrevivido a más de un servidor caído a deshora.
-                Me gusta esa zona donde el frontend se cruza con la lógica de negocio —
-                me siento cómodo tanto montando una API REST como ajustando un componente Angular
-                hasta que el diseño queda exactamente como debe.
+                Lo que más me motiva es <strong>identificar una necesidad y construir una
+                solución completa para ella</strong>. Así nació SIMA, mi proyecto final:
+                una plataforma para reportar y seguir incidencias urbanas sobre un mapa,
+                con su API, su interfaz, su autenticación y su despliegue.
               </p>
               <p class="bio-text">
-                Cuando no estoy picando código, probablemente estoy aprendiendo algo nuevo.
-                Que en mi caso es básicamente lo mismo.
+                Mi base en sistemas es una ventaja como desarrollador: entiendo
+                <strong>cómo funciona un servidor</strong>, cómo se despliega una
+                aplicación y qué ocurre cuando algo falla en producción. Eso me permite
+                escribir código pensando en dónde y cómo se va a ejecutar.
               </p>
               <div class="soft-chips">
-                <span class="chip chip-soft">Trabajo en equipo</span>
-                <span class="chip chip-soft">Adaptabilidad</span>
-                <span class="chip chip-soft">Resolución de problemas</span>
-                <span class="chip chip-soft">Atención al cliente</span>
+                <span class="chip">Trabajo en equipo</span>
+                <span class="chip">Adaptabilidad</span>
+                <span class="chip">Resolución de problemas</span>
+                <span class="chip">Atención al cliente</span>
               </div>
             </div>
 
@@ -170,53 +173,117 @@
           <div class="section-heading animate fade-up">
             <p class="code-label">// package.json</p>
             <h2>Con qué trabajo</h2>
+            <p class="section-desc">Lo que más he usado, y lo que he tocado alrededor.</p>
+          </div>
+
+          <div class="stack-primary animate fade-up">
+            <div class="stack-tile">
+              <h3>Java · Spring Boot</h3>
+              <p>APIs REST con JPA / Hibernate, autenticación con JWT y OAuth2.</p>
+              <p class="stack-used">SIMA · FiumPlan · Valrog</p>
+            </div>
+            <div class="stack-tile">
+              <h3>PHP · Laravel</h3>
+              <p>MVC con Eloquent ORM, Sanctum y consumo de APIs externas.</p>
+              <p class="stack-used">NutriTrack · VideoTracker</p>
+            </div>
+            <div class="stack-tile">
+              <h3>JavaScript · Angular · React</h3>
+              <p>Interfaces con TypeScript y componentes reutilizables.</p>
+              <p class="stack-used">SIMA · NutriTrack · Inventtatte</p>
+            </div>
+            <div class="stack-tile">
+              <h3>MySQL · MariaDB</h3>
+              <p>Bases de datos relacionales, también SQL Server en prácticas.</p>
+              <p class="stack-used">SIMA · Supermercados Díaz</p>
+            </div>
+            <div class="stack-tile">
+              <h3>CSS · Bootstrap</h3>
+              <p>Diseño responsive con Bootstrap, Tailwind y SASS.</p>
+              <p class="stack-used">VideoTracker · NutriTrack</p>
+            </div>
+          </div>
+
+          <p class="stack-sub animate fade-up">También he trabajado con</p>
+          <div class="chip-row animate fade-up">
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">SASS</span>
+            <span class="chip">Alpine.js</span>
+            <span class="chip">Eloquent ORM</span>
+            <span class="chip">JPA / Hibernate</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">OAuth2</span>
+            <span class="chip">JWT</span>
+            <span class="chip">Git</span>
+            <span class="chip">Docker</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── SISTEMAS ─────────────────────────────────────────── -->
+      <section class="section section-alt" id="systems">
+        <div class="container">
+          <div class="section-heading animate fade-up">
+            <p class="code-label">// systemctl status</p>
+            <h2>Y lo que hay debajo</h2>
+            <p class="section-intro">
+              Vengo de Sistemas Microinformáticos y Redes, así que no solo escribo la
+              aplicación: sé instalarla, desplegarla y mantenerla en pie.
+            </p>
           </div>
 
           <div class="stack-grid animate fade-up">
             <div class="stack-cat">
-              <p class="stack-cat-label">Frontend</p>
+              <p class="stack-cat-label">Servidores y despliegue</p>
+              <p class="stack-cat-text">
+                Administración de servidores Linux y Windows. En SIMA desplegué sobre
+                Ubuntu Server con Apache como proxy inverso y certificado SSL.
+              </p>
               <div class="chip-row">
-                <span class="chip">TypeScript</span>
-                <span class="chip">Angular 17+</span>
-                <span class="chip">React</span>
-                <span class="chip">Tailwind CSS</span>
-                <span class="chip">Bootstrap</span>
-                <span class="chip">SASS</span>
-                <span class="chip">Alpine.js</span>
-              </div>
-            </div>
-            <div class="stack-cat">
-              <p class="stack-cat-label">Backend</p>
-              <div class="chip-row">
-                <span class="chip">Java Spring Boot</span>
-                <span class="chip">PHP Laravel</span>
-                <span class="chip">REST APIs</span>
-                <span class="chip">OAuth2</span>
-                <span class="chip">JWT</span>
-                <span class="chip">Eloquent ORM</span>
-                <span class="chip">JPA / Hibernate</span>
-              </div>
-            </div>
-            <div class="stack-cat">
-              <p class="stack-cat-label">Infraestructura</p>
-              <div class="chip-row">
-                <span class="chip">Docker</span>
                 <span class="chip">Ubuntu Server</span>
                 <span class="chip">Debian</span>
+                <span class="chip">Windows Server</span>
                 <span class="chip">Apache</span>
                 <span class="chip">Nginx</span>
-                <span class="chip">Windows Server</span>
-                <span class="chip">Git</span>
+                <span class="chip">Docker</span>
               </div>
             </div>
             <div class="stack-cat">
-              <p class="stack-cat-label">Bases de datos &amp; redes</p>
+              <p class="stack-cat-label">Redes y servicios</p>
+              <p class="stack-cat-text">
+                Montaje de redes y sistemas informáticos en aperturas de nuevos centros
+                de Supermercados Díaz Cadenas.
+              </p>
               <div class="chip-row">
-                <span class="chip">MySQL</span>
-                <span class="chip">MariaDB</span>
+                <span class="chip">DHCP</span>
+                <span class="chip">DNS</span>
+                <span class="chip">FTP</span>
+                <span class="chip">SMTP</span>
+              </div>
+            </div>
+            <div class="stack-cat">
+              <p class="stack-cat-label">Bases de datos en servidor</p>
+              <p class="stack-cat-text">
+                Configuración de SQL Server en prácticas y MariaDB en producción
+                para SIMA.
+              </p>
+              <div class="chip-row">
                 <span class="chip">SQL Server</span>
-                <span class="chip">DHCP · DNS</span>
-                <span class="chip">FTP · SMTP</span>
+                <span class="chip">MariaDB</span>
+                <span class="chip">MySQL</span>
+              </div>
+            </div>
+            <div class="stack-cat">
+              <p class="stack-cat-label">Soporte técnico</p>
+              <p class="stack-cat-text">
+                Resolución de incidencias de hardware, redes y software corporativo,
+                atención técnica telefónica y manuales de uso para empleados.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Windows 7 · 10 · 11</span>
+                <span class="chip">Inventario</span>
+                <span class="chip">Mantenimiento</span>
               </div>
             </div>
           </div>
@@ -224,7 +291,7 @@
       </section>
 
       <!-- ─── PROJECTS ─────────────────────────────────────────── -->
-      <section class="section section-alt" id="projects">
+      <section class="section" id="projects">
         <div class="container">
           <div class="section-heading animate fade-up">
             <p class="code-label">// git log --oneline</p>
@@ -234,31 +301,98 @@
 
           <div class="projects-grid">
 
-            <article class="project-card animate fade-right">
+            <article class="project-card project-featured animate fade-up">
               <div class="card-inner">
                 <div class="card-front">
-                  <div class="project-tag">TFG</div>
-                  <h3>SIMA</h3>
-                  <p class="project-subtitle">Gestor de Incidencias Urbanas</p>
-                  <p>
-                    Mapa interactivo para reportar y gestionar incidencias en la ciudad.
-                    Spring Boot + React, autenticación híbrida y panel de administración por roles.
-                  </p>
-                  <div class="card-front-stack">
-                    <span>Java</span><span>React</span><span>MariaDB</span><span>Ubuntu</span>
+
+                  <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Capturas de SIMA">
+                    <div class="carousel-track">
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 4">
+                        <img src="img/sima/index.png" alt="Portada de SIMA: «Tu ciudad, más conectada que nunca», con botones para reportar una incidencia y ver el mapa de la ciudad" width="1692" height="1221" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 4">
+                        <img src="img/sima/mapa1.png" alt="Mapa 3D de Sevilla con una incidencia marcada y filtros por ciudad y estado" width="1712" height="1227" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 4">
+                        <img src="img/sima/mapa2.png" alt="Mapa de Andalucía con incidencias pendientes y en proceso agrupadas por zona" width="1716" height="1231" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 4">
+                        <img src="img/sima/acciones.png" alt="Sección «¿Qué puedes hacer en S.I.M.A.?» con incidencias, mapa en tiempo real, anuncios y ciudades" width="1700" height="1227" loading="lazy" />
+                      </figure>
+                    </div>
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Captura anterior">&#8592;</button>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Captura siguiente">&#8594;</button>
+                    <div class="carousel-dots">
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 1" aria-current="true"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 2"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 3"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 4"></button>
+                    </div>
                   </div>
-                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+
+                  <div class="project-info">
+                    <div class="project-tag chip">TFG</div>
+                    <h3>SIMA</h3>
+                    <p class="project-subtitle">Gestor de Incidencias Urbanas</p>
+                    <p class="project-lead">
+                      Plataforma para reportar y seguir las incidencias de una ciudad
+                      sobre un mapa interactivo.
+                    </p>
+                    <ul class="project-key-list">
+                      <li>Mapa con MapLibre para localizar incidencias y filtrarlas por estado.</li>
+                      <li>Acceso con JWT propio y Google OAuth2, con roles de técnico, operador y supervisor.</li>
+                      <li>Panel de administración para gestionar todo el ciclo de vida de cada incidencia.</li>
+                    </ul>
+                    <div class="card-front-stack">
+                      <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">MapLibre</span><span class="chip">MariaDB</span><span class="chip">Ubuntu</span>
+                    </div>
+                    <div class="project-actions">
+                      <a class="button button-primary" href="https://sima.niet0.dev" target="_blank" rel="noopener noreferrer">Ver proyecto &#8599;</a>
+                      <button class="button button-secondary project-toggle" type="button" aria-expanded="false">Cómo se hizo</button>
+                    </div>
+                  </div>
+
                 </div>
+
                 <div class="card-back" aria-hidden="true">
-                  <div class="project-tag">TFG · Spring Boot · React · MariaDB</div>
-                  <h3>SIMA — Gestor de Incidencias Urbanas</h3>
-                  <ul class="project-detail-list">
-                    <li>Aplicación SPA con mapa interactivo (MapLibre) para localizar y filtrar incidencias urbanas por categoría y estado.</li>
-                    <li>Autenticación híbrida: JWT propio y OAuth2 con Google. Roles de técnico, operador y supervisor.</li>
-                    <li>Panel admin con seguimiento en tiempo real y gestión completa del ciclo de vida de cada incidencia.</li>
-                    <li>Despliegue en Ubuntu Server con Apache como proxy inverso y certificado SSL.</li>
-                  </ul>
-                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                  <div class="project-tag chip">TFG · Spring Boot · React · MariaDB</div>
+                  <h3>SIMA — cómo se hizo y por qué</h3>
+
+                  <div class="project-back-grid">
+                    <div>
+                      <h4>El objetivo</h4>
+                      <p>
+                        Que reportar un problema urbano —un bache, una farola, mobiliario roto—
+                        fuera rápido, sencillo y transparente: se marca sobre el mapa y se
+                        puede seguir su estado hasta que se resuelve. Lo planteé como mi
+                        proyecto final de DAW para recorrer una aplicación entera, del
+                        servidor a la interfaz.
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Cómo lo construí</h4>
+                      <p>
+                        Una API REST en Spring Boot con JPA sobre MariaDB, y una SPA en React
+                        que dibuja el mapa con MapLibre. El acceso combina un JWT propio con
+                        Google OAuth2, y los permisos se reparten por roles. Está pensada para
+                        varias ciudades: cada ayuntamiento se puede añadir a la plataforma.
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Puesta en marcha</h4>
+                      <p>
+                        Lo desplegué yo mismo en un Ubuntu Server, con Apache como proxy
+                        inverso y certificado SSL, en su propio dominio. Esa parte de sistemas
+                        me la traje de mi Grado Medio, y es la que más me ayudó a entender
+                        cómo se comporta la aplicación fuera de mi ordenador.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="project-actions">
+                    <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                    <a class="button button-primary" href="https://sima.niet0.dev" target="_blank" rel="noopener noreferrer">Ver proyecto &#8599;</a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -266,7 +400,7 @@
             <article class="project-card animate fade-up">
               <div class="card-inner">
                 <div class="card-front">
-                  <div class="project-tag">Nutrición</div>
+                  <div class="project-tag chip">Nutrición</div>
                   <h3>NutriTrack</h3>
                   <p class="project-subtitle">Plataforma Nutricional Full-Stack</p>
                   <p>
@@ -274,12 +408,12 @@
                     dashboard de macros y autenticación segura con Laravel Sanctum.
                   </p>
                   <div class="card-front-stack">
-                    <span>Angular</span><span>Laravel</span><span>Sanctum</span><span>TheMealDB</span>
+                    <span class="chip">Angular</span><span class="chip">Laravel</span><span class="chip">Sanctum</span><span class="chip">TheMealDB</span>
                   </div>
                   <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
                 </div>
                 <div class="card-back" aria-hidden="true">
-                  <div class="project-tag">TypeScript · Angular 17+ · PHP Laravel 11</div>
+                  <div class="project-tag chip">TypeScript · Angular 17+ · PHP Laravel 11</div>
                   <h3>NutriTrack — Plataforma Nutricional</h3>
                   <ul class="project-detail-list">
                     <li>Arquitectura Full-Stack segura con tokens de sesión mediante Laravel Sanctum y CRUD completo de perfiles nutricionales.</li>
@@ -295,7 +429,7 @@
             <article class="project-card animate fade-left">
               <div class="card-inner">
                 <div class="card-front">
-                  <div class="project-tag">Gaming</div>
+                  <div class="project-tag chip">Gaming</div>
                   <h3>VideoTracker</h3>
                   <p class="project-subtitle">Biblioteca de Videojuegos</p>
                   <p>
@@ -303,12 +437,12 @@
                     y ve qué se está streamando ahora mismo en Twitch.
                   </p>
                   <div class="card-front-stack">
-                    <span>Laravel 12</span><span>Tailwind</span><span>IGDB API</span><span>Twitch</span>
+                    <span class="chip">Laravel 12</span><span class="chip">Tailwind</span><span class="chip">IGDB API</span><span class="chip">Twitch</span>
                   </div>
                   <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
                 </div>
                 <div class="card-back" aria-hidden="true">
-                  <div class="project-tag">PHP Laravel 12 · Tailwind · Alpine.js</div>
+                  <div class="project-tag chip">PHP Laravel 12 · Tailwind · Alpine.js</div>
                   <h3>VideoTracker — Biblioteca de Videojuegos</h3>
                   <ul class="project-detail-list">
                     <li>Arquitectura MVC con Eloquent ORM y relaciones polimórficas entre juegos, plataformas, géneros y usuarios.</li>
@@ -324,7 +458,7 @@
             <article class="project-card animate fade-right">
               <div class="card-inner">
                 <div class="card-front">
-                  <div class="project-tag">Gestión</div>
+                  <div class="project-tag chip">Gestión</div>
                   <h3>FiumPlan</h3>
                   <p class="project-subtitle">Gestor de Proyectos</p>
                   <p>
@@ -332,12 +466,12 @@
                     automáticos y almacena archivos en la nube.
                   </p>
                   <div class="card-front-stack">
-                    <span>Spring Boot</span><span>JPA</span><span>Cloudinary</span><span>PDF</span>
+                    <span class="chip">Spring Boot</span><span class="chip">JPA</span><span class="chip">Cloudinary</span><span class="chip">PDF</span>
                   </div>
                   <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
                 </div>
                 <div class="card-back" aria-hidden="true">
-                  <div class="project-tag">Java Spring Boot · JPA · Cloudinary</div>
+                  <div class="project-tag chip">Java Spring Boot · JPA · Cloudinary</div>
                   <h3>FiumPlan — Gestor de Proyectos</h3>
                   <ul class="project-detail-list">
                     <li>API REST con Spring Boot: gestión de proyectos con tareas, prioridades, estados y asignación por roles.</li>
@@ -355,7 +489,7 @@
       </section>
 
       <!-- ─── EXPERIENCE ─────────────────────────────────────── -->
-      <section class="section" id="experience">
+      <section class="section section-alt" id="experience">
         <div class="container">
           <div class="section-heading animate fade-up">
             <p class="code-label">// cv.json → experience</p>
@@ -415,7 +549,7 @@
       </section>
 
       <!-- ─── CONTACT ─────────────────────────────────────────── -->
-      <section class="section section-alt section-contact" id="contact">
+      <section class="section section-contact" id="contact">
         <div class="container contact-grid">
 
           <div class="contact-copy animate fade-right">
@@ -489,6 +623,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
