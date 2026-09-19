@@ -398,60 +398,201 @@
               </div>
             </article>
 
-            <article class="project-card animate fade-up">
+            <article class="project-card project-featured animate fade-up">
               <div class="card-inner">
                 <div class="card-front">
-                  <div class="project-tag chip">Nutrición</div>
-                  <h3>NutriTrack</h3>
-                  <p class="project-subtitle">Plataforma Nutricional Full-Stack</p>
-                  <p>
-                    Seguimiento nutricional con búsqueda de recetas en tiempo real,
-                    dashboard de macros y autenticación segura con Laravel Sanctum.
-                  </p>
-                  <div class="card-front-stack">
-                    <span class="chip">Angular</span><span class="chip">Laravel</span><span class="chip">Sanctum</span><span class="chip">TheMealDB</span>
+
+                  <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Capturas de NutriTrack">
+                    <div class="carousel-track">
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 4">
+                        <img src="img/nutritrack/index.jpg" alt="Portada de Nutri-Track: «Tu nutrición, bajo control», con el botón «Empezar a buscar» y los tres pasos Busca, Registra y Analiza" width="1400" height="998" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 4">
+                        <img src="img/nutritrack/dietas.jpg" alt="Preferencias de dieta: perfiles Estándar, Vegana, Vegetariana, Sin gluten, Sin lactosa y Sin aceite de palma, con los ingredientes que descarta cada uno" width="1400" height="1002" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 4">
+                        <img src="img/nutritrack/diario.jpg" alt="Mi Diario: tabla con las recetas del día, su cantidad en gramos, calorías, proteínas, grasas y carbohidratos, y el total de kcal" width="1400" height="1003" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 4">
+                        <img src="img/nutritrack/panel.jpg" alt="Mi Panel Nutricional: calorías de hoy, media semanal y total mensual, con un gráfico circular de la distribución de proteínas, carbohidratos y grasas" width="1400" height="1003" loading="lazy" />
+                      </figure>
+                    </div>
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Captura anterior">&#8592;</button>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Captura siguiente">&#8594;</button>
+                    <div class="carousel-dots">
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 1" aria-current="true"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 2"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 3"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 4"></button>
+                    </div>
                   </div>
-                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+
+                  <div class="project-info">
+                    <div class="project-tag chip">Nutrición</div>
+                    <h3>NutriTrack</h3>
+                    <p class="project-subtitle">Plataforma Nutricional Full-Stack</p>
+                    <p class="project-lead">
+                      Aplicación para buscar recetas, registrar lo que comes cada día y
+                      seguir tu evolución nutricional con gráficos.
+                    </p>
+                    <ul class="project-key-list">
+                      <li>Buscador de recetas con TheMealDB y avisos según tu dieta: vegana, sin gluten, sin lactosa…</li>
+                      <li>Diario con las cantidades en gramos y los macros calculados automáticamente.</li>
+                      <li>Panel con la distribución de hoy, la evolución semanal y la tendencia mensual.</li>
+                    </ul>
+                    <div class="card-front-stack">
+                      <span class="chip">Angular</span><span class="chip">Laravel</span><span class="chip">Sanctum</span><span class="chip">MySQL</span><span class="chip">Chart.js</span><span class="chip">TheMealDB</span>
+                    </div>
+                    <div class="project-actions">
+                      <a class="button button-primary" href="https://nutritrack.franrv.es" target="_blank" rel="noopener noreferrer">Ver proyecto &#8599;</a>
+                      <button class="button button-secondary project-toggle" type="button" aria-expanded="false">Cómo se hizo</button>
+                    </div>
+                  </div>
+
                 </div>
+
                 <div class="card-back" aria-hidden="true">
-                  <div class="project-tag chip">TypeScript · Angular 17+ · PHP Laravel 11</div>
-                  <h3>NutriTrack — Plataforma Nutricional</h3>
-                  <ul class="project-detail-list">
-                    <li>Arquitectura Full-Stack segura con tokens de sesión mediante Laravel Sanctum y CRUD completo de perfiles nutricionales.</li>
-                    <li>Integración con la API TheMealDB para búsqueda dinámica de recetas según preferencias e ingredientes.</li>
-                    <li>Dashboard de macros y calorías con gráficos estadísticos dinámicos y seguimiento diario.</li>
-                    <li>Componentes Angular reutilizables con separación clara de capas y diseño responsive.</li>
-                  </ul>
-                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                  <div class="project-tag chip">Angular 19 · Laravel 13 · MySQL</div>
+                  <h3>NutriTrack — cómo se hizo y por qué</h3>
+
+                  <div class="project-back-grid">
+                    <div>
+                      <h4>El objetivo</h4>
+                      <p>
+                        Que llevar el control de lo que comes fuera sencillo: buscar una
+                        receta, apuntar cuánto has comido y ver de un vistazo cuántas
+                        calorías y macros llevas hoy, esta semana y este mes. Lo planteé
+                        como una aplicación completa, con su propia API y una interfaz
+                        separada del servidor.
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Cómo lo construí</h4>
+                      <p>
+                        Un frontend en Angular 19 con Bootstrap y Chart.js para los gráficos,
+                        y una API REST en Laravel con Sanctum para el acceso con token y los
+                        roles de usuario y administrador. Las recetas vienen de TheMealDB, y
+                        cada usuario guarda su perfil, sus preferencias de dieta y su diario
+                        en MySQL. El backend tiene tests de autenticación, diario y
+                        administración.
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Puesta en marcha</h4>
+                      <p>
+                        Lo tengo desplegado en mi propio VPS con Ubuntu: el frontend compilado
+                        se sirve como sitio estático con Apache y la API Laravel va en su
+                        propio subdominio, los dos con certificado SSL y con MySQL en el
+                        mismo servidor.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="project-actions">
+                    <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                    <a class="button button-primary" href="https://nutritrack.franrv.es" target="_blank" rel="noopener noreferrer">Ver proyecto &#8599;</a>
+                  </div>
                 </div>
               </div>
             </article>
 
-            <article class="project-card animate fade-left">
+            <article class="project-card project-featured animate fade-up">
               <div class="card-inner">
                 <div class="card-front">
-                  <div class="project-tag chip">Gaming</div>
-                  <h3>VideoTracker</h3>
-                  <p class="project-subtitle">Biblioteca de Videojuegos</p>
-                  <p>
-                    Explora juegos con datos de IGDB en tiempo real, filtra por género y plataforma,
-                    y ve qué se está streamando ahora mismo en Twitch.
-                  </p>
-                  <div class="card-front-stack">
-                    <span class="chip">Laravel 12</span><span class="chip">Tailwind</span><span class="chip">IGDB API</span><span class="chip">Twitch</span>
+
+                  <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Capturas de VideoTracker">
+                    <div class="carousel-track">
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 5">
+                        <img src="img/videotracker/index.jpg" alt="Inicio de VideoTracker: resumen con los juegos en colección, jugando y completados, los últimos juegos añadidos por la comunidad y accesos rápidos" width="1400" height="1012" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 5">
+                        <img src="img/videotracker/biblioteca.jpg" alt="Mi Biblioteca: tabla de juegos con plataforma, estado y nota, botón para exportar a PDF y estadísticas de completados, jugando, pendientes y nota media" width="1400" height="1011" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 5">
+                        <img src="img/videotracker/descripcionyopiniones.jpg" alt="Ficha de The Witcher 3: Wild Hunt con su nota media global, barra de logros, información del juego, tu registro y los comentarios de la comunidad" width="1400" height="1013" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 5">
+                        <img src="img/videotracker/logros.jpg" alt="Ficha de un juego con la lista de logros desplegada, tres de ellos desbloqueados, y el progreso de 3 de 20 logros" width="1400" height="1012" loading="lazy" />
+                      </figure>
+                      <figure class="carousel-slide" role="group" aria-roledescription="diapositiva" aria-label="5 de 5">
+                        <img src="img/videotracker/ranking.jpg" alt="Rankings de la comunidad: juegos mejor valorados, más populares y usuarios con más juegos completados" width="1400" height="1011" loading="lazy" />
+                      </figure>
+                    </div>
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Captura anterior">&#8592;</button>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Captura siguiente">&#8594;</button>
+                    <div class="carousel-dots">
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 1" aria-current="true"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 2"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 3"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 4"></button>
+                      <button class="carousel-dot" type="button" aria-label="Ir a la captura 5"></button>
+                    </div>
                   </div>
-                  <button class="project-toggle" type="button" aria-expanded="false">Ver más</button>
+
+                  <div class="project-info">
+                    <div class="project-tag chip">Gaming</div>
+                    <h3>VideoTracker</h3>
+                    <p class="project-subtitle">Biblioteca de Videojuegos</p>
+                    <p class="project-lead">
+                      Aplicación para llevar tu biblioteca de videojuegos y compararla
+                      con la de la comunidad.
+                    </p>
+                    <ul class="project-key-list">
+                      <li>Búsqueda de juegos en IGDB para rellenar sus datos, o alta manual con portada propia.</li>
+                      <li>Estado, plataforma y nota personal de cada juego, con logros y comentarios.</li>
+                      <li>Catálogo de la comunidad, rankings y exportación de tu biblioteca a PDF.</li>
+                    </ul>
+                    <div class="card-front-stack">
+                      <span class="chip">Laravel 12</span><span class="chip">Tailwind</span><span class="chip">Alpine.js</span><span class="chip">IGDB API</span><span class="chip">MySQL</span><span class="chip">DomPDF</span>
+                    </div>
+                    <div class="project-actions">
+                      <a class="button button-primary" href="https://videotracker.franrv.es" target="_blank" rel="noopener noreferrer">Ver proyecto &#8599;</a>
+                      <button class="button button-secondary project-toggle" type="button" aria-expanded="false">Cómo se hizo</button>
+                    </div>
+                  </div>
+
                 </div>
+
                 <div class="card-back" aria-hidden="true">
-                  <div class="project-tag chip">PHP Laravel 12 · Tailwind · Alpine.js</div>
-                  <h3>VideoTracker — Biblioteca de Videojuegos</h3>
-                  <ul class="project-detail-list">
-                    <li>Arquitectura MVC con Eloquent ORM y relaciones polimórficas entre juegos, plataformas, géneros y usuarios.</li>
-                    <li>Integración con la API de IGDB y autenticación OAuth2 de Twitch para datos de videojuegos en tiempo real.</li>
-                    <li>Exploración con filtros por género, plataforma y popularidad, con paginación eficiente.</li>
-                    <li>Seguimiento de streams activos en Twitch relacionados con los juegos explorados.</li>
-                  </ul>
-                  <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                  <div class="project-tag chip">Laravel 12 · Tailwind · Alpine.js · MySQL</div>
+                  <h3>VideoTracker — cómo se hizo y por qué</h3>
+
+                  <div class="project-back-grid">
+                    <div>
+                      <h4>El objetivo</h4>
+                      <p>
+                        Tener en un solo sitio mi biblioteca de videojuegos: qué tengo, en qué
+                        plataforma, en qué estado (pendiente, jugando o completado) y con qué
+                        nota, y poder compararlo con lo que hace el resto de usuarios. Lo
+                        planteé como una aplicación web completa, con usuarios, datos propios
+                        y una API externa.
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Cómo lo construí</h4>
+                      <p>
+                        Una aplicación Laravel 12 con vistas Blade, Tailwind y Alpine.js,
+                        compilada con Vite, y MySQL como base de datos. Los juegos se buscan
+                        en la API de IGDB, autenticándome con OAuth2 de Twitch, o se añaden
+                        a mano con su portada. Cada usuario tiene su biblioteca, marca logros,
+                        comenta, sigue a otros usuarios y recibe notificaciones. Hay rankings
+                        y la biblioteca se exporta a PDF con DomPDF.
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Puesta en marcha</h4>
+                      <p>
+                        Lo tengo desplegado en mi propio VPS con Ubuntu, con Apache y MySQL,
+                        en su propio subdominio. Las claves de IGDB y Twitch viven solo en el
+                        archivo de configuración del servidor, no en el repositorio.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="project-actions">
+                    <button class="project-back-btn" type="button" aria-label="Volver al frente">&#8592; Volver</button>
+                    <a class="button button-primary" href="https://videotracker.franrv.es" target="_blank" rel="noopener noreferrer">Ver proyecto &#8599;</a>
+                  </div>
                 </div>
               </div>
             </article>
