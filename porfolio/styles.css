@@ -115,6 +115,7 @@ p  { margin: 0; }
 }
 .section { padding: clamp(4.5rem, 7vw, 8rem) 0; }
 .section-alt { background: var(--bg-alt); }
+.section-tint { background: rgb(var(--bg-alt-rgb) / 0.12); }
 
 /* ─── Typography helpers ─────────────────────────────────── */
 .code-label {
@@ -893,6 +894,50 @@ p  { margin: 0; }
 }
 .carousel-dot[aria-current="true"]::before { background: var(--bg); transform: scale(1.35); }
 
+/* ─── Certificados ───────────────────────────────────────── */
+.certs-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(0, 460px);
+  gap: 2rem;
+  align-items: start;
+}
+.carousel-certs .carousel-track { aspect-ratio: 1400 / 990; }
+.carousel-certs .carousel-dots {
+  position: static;
+  transform: none;
+  width: max-content;
+  margin: 0.6rem auto;
+}
+.carousel-certs .carousel-btn {
+  top: calc(50% - 1.2rem);
+  width: 32px;
+  height: 32px;
+  font-size: 0.95rem;
+}
+.carousel-certs .carousel-prev { left: 0.5rem; }
+.carousel-certs .carousel-next { right: 0.5rem; }
+.carousel-certs .carousel-slide a { display: block; height: 100%; }
+.carousel-certs .carousel-slide img {
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+}
+.cert-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.cert-item {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cert-item:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.cert-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cert-title { font-weight: 600; color: var(--text); }
+.cert-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--muted); }
+.cert-open { font-size: 0.85rem; color: var(--accent-deep); }
+
 /* ─── Timeline / Experience ──────────────────────────────── */
 .timeline { display: grid; gap: 1.25rem; }
 .timeline-card {
@@ -1073,7 +1118,18 @@ p  { margin: 0; }
 
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 1000px) {
-  .project-featured .card-front { grid-template-columns: 1fr; }
+  .project-featured .card-front { grid-template-columns: 1fr; align-self: start; align-content: start; }
+  .project-featured .card-back { align-self: start; }
+  /* En una columna la cara trasera es más alta que la frontal. Mientras no está girada
+     no ocupa sitio, así la tarjeta mide lo que mide su contenido y no deja huecos.
+     El retardo evita que se colapse antes de terminar el giro de vuelta.           */
+  .project-featured:not(.flipped) .card-back {
+    height: 0;
+    padding-block: 0;
+    border-width: 0;
+    overflow: hidden;
+    transition: height 0s linear 0.7s, padding 0s linear 0.7s, border-width 0s linear 0.7s;
+  }
   .project-back-grid { grid-template-columns: 1fr; gap: 1.1rem; }
 }
 
@@ -1082,6 +1138,7 @@ p  { margin: 0; }
   .terminal-card { max-width: 500px; }
   .about-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .certs-layout { grid-template-columns: minmax(0, 1fr); max-width: 460px; }
 }
 
 @media (max-width: 700px) {
@@ -1090,6 +1147,7 @@ p  { margin: 0; }
   .stack-grid { grid-template-columns: 1fr; }
   .card-inner { height: 420px; }
   .project-featured .card-inner { height: auto; }
+  .project-featured .card-front { gap: 1.25rem; }
   .stat-pills { grid-template-columns: repeat(3, 1fr); }
   .main-nav { gap: 0.9rem; }
 }
@@ -1104,5 +1162,5 @@ p  { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .carousel-track { scroll-behavior: auto; }
-  .carousel-btn, .carousel-dot::before { transition: none; }
+  .carousel-btn, .carousel-dot::before, .cert-item { transition: none; }
 }

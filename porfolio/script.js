@@ -90,7 +90,7 @@ document.querySelectorAll('.carousel').forEach((carousel) => {
   });
 });
 
-const CONTACT_API = 'https://api.franromero.es/api/contact';
+const CONTACT_API = 'https://api.franrv.es/api/contact';
 
 if (form) {
   form.addEventListener('submit', async (event) => {
