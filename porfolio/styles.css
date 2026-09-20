@@ -255,6 +255,15 @@ p  { margin: 0; }
   color: var(--accent-deep);
   white-space: nowrap;
 }
+.chip-icon { width: 16px; height: 16px; margin: 0 0.45rem 0 -0.2rem; flex: none; }
+/* En las secciones moradas los logos oscuros se pierden: fondo claro circular */
+.section-alt .chip-icon {
+  box-sizing: content-box;
+  padding: 2px;
+  margin-left: -0.45rem;
+  border-radius: 50%;
+  background: #f4effb;
+}
 /* ─── Hero ───────────────────────────────────────────────── */
 .hero-grid {
   display: grid;
@@ -290,6 +299,8 @@ p  { margin: 0; }
   gap: 0.5rem;
   margin-bottom: 2rem;
 }
+/* Salto de línea: lenguajes arriba, frameworks abajo */
+.hero-chips .chips-break { flex-basis: 100%; height: 0; }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -499,25 +510,6 @@ p  { margin: 0; }
   margin: 1rem 0;
 }
 
-/* Stats */
-.stat-pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
-.stat-pill {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 1rem 0.75rem;
-  text-align: center;
-}
-.stat-num {
-  display: block;
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: var(--strong);
-  line-height: 1;
-  margin-bottom: 0.3rem;
-}
-.stat-label { font-size: 0.75rem; color: var(--muted); }
-
 /* ─── Stack ──────────────────────────────────────────────── */
 .stack-primary {
   display: grid;
@@ -533,6 +525,8 @@ p  { margin: 0; }
   border-radius: var(--radius);
   padding: 1.5rem;
 }
+.tile-icons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.tile-icons img { width: 28px; height: 28px; }
 .stack-tile h3 {
   margin: 0;
   font-size: 1.15rem;
@@ -638,6 +632,37 @@ p  { margin: 0; }
   background: var(--card-back);
   border: 1px solid var(--border-strong);
   box-shadow: var(--shadow);
+}
+
+/* Bloque morado desplazado detrás de cada tarjeta (el mismo efecto que la foto del hero).
+   Para quitarlo: borrar este bloque, el margen de .project-card y devolver
+   box-shadow: var(--shadow) a .card-front y .card-back.                              */
+.project-card {
+  --card-offset: 12px;
+  position: relative;
+  margin: 0 var(--card-offset) var(--card-offset) 0;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  transform: translate(var(--card-offset), var(--card-offset));
+  transition: transform 0.25s;
+}
+.project-card:not(.flipped):hover::before {
+  transform: translate(calc(var(--card-offset) + 4px), calc(var(--card-offset) + 4px));
+}
+.project-card .card-inner { z-index: 1; }
+.project-card .card-front,
+.project-card .card-back,
+.project-card:not(.flipped):hover .card-front { box-shadow: none; }
+/* El frente era translúcido: con el bloque detrás se vería oscuro, así que lo hacemos opaco
+   con el mismo tono (55 % de blanco sobre el fondo beis). */
+.project-card .card-front {
+  background: #eae1d1;
+  background: color-mix(in srgb, #fff 55%, var(--bg));
 }
 
 /* Card content */
@@ -807,6 +832,7 @@ p  { margin: 0; }
   gap: 1.75rem;
   margin-bottom: 1.25rem;
 }
+.project-back-full { grid-column: 1 / -1; }
 .project-back-grid h4 {
   margin: 0 0 0.5rem;
   font-family: 'JetBrains Mono', monospace;
@@ -937,6 +963,26 @@ p  { margin: 0; }
 .cert-title { font-weight: 600; color: var(--text); }
 .cert-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--muted); }
 .cert-open { font-size: 0.85rem; color: var(--accent-deep); }
+
+/* ─── Doble fondo (bloque desplazado) en el resto de tarjetas ────────────────
+   Mismo efecto que la foto del hero y las tarjetas de proyecto, pero con una
+   sombra dura. En secciones claras el bloque es morado; en las moradas, beis.
+   Para quitarlo: borrar este bloque y los ajustes marcados con "doble fondo". */
+.stack-tile,
+.stack-cat,
+.edu-card,
+.contact-form,
+.cert-item {
+  --offset: 12px;
+  --block: var(--bg-alt);
+  box-shadow: var(--offset) var(--offset) 0 var(--block);
+}
+.section-alt .stack-cat,
+.section-alt .edu-card { --block: var(--bg); }
+.cert-item { --offset: 6px; }
+/* doble fondo: más aire entre tarjetas apiladas para que el bloque no las toque */
+.edu-card { margin-bottom: 1.7rem; }
+.cert-list { gap: 1.1rem; }
 
 /* ─── Timeline / Experience ──────────────────────────────── */
 .timeline { display: grid; gap: 1.25rem; }
@@ -1148,7 +1194,9 @@ p  { margin: 0; }
   .card-inner { height: 420px; }
   .project-featured .card-inner { height: auto; }
   .project-featured .card-front { gap: 1.25rem; }
-  .stat-pills { grid-template-columns: repeat(3, 1fr); }
+  .project-card { --card-offset: 10px; }
+  .stack-tile, .stack-cat, .edu-card, .contact-form { --offset: 10px; }
+  .cert-item { --offset: 5px; }
   .main-nav { gap: 0.9rem; }
 }
 
@@ -1162,5 +1210,5 @@ p  { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .carousel-track { scroll-behavior: auto; }
-  .carousel-btn, .carousel-dot::before, .cert-item { transition: none; }
+  .carousel-btn, .carousel-dot::before, .cert-item, .project-card::before { transition: none; }
 }
